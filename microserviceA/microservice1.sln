@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "microserviceA", "microserviceA\microserviceA.csproj", "{A69E605D-0AD2-4C09-99FE-05FBADFFB8F9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "microservice1", "microservice1\microservice1.csproj", "{44A2AC5F-F877-462F-92CD-D7DCE13E6E1E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{A69E605D-0AD2-4C09-99FE-05FBADFFB8F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A69E605D-0AD2-4C09-99FE-05FBADFFB8F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A69E605D-0AD2-4C09-99FE-05FBADFFB8F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A69E605D-0AD2-4C09-99FE-05FBADFFB8F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44A2AC5F-F877-462F-92CD-D7DCE13E6E1E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44A2AC5F-F877-462F-92CD-D7DCE13E6E1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44A2AC5F-F877-462F-92CD-D7DCE13E6E1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44A2AC5F-F877-462F-92CD-D7DCE13E6E1E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
