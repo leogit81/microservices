@@ -2,6 +2,7 @@
 using FluentNHibernate.Cfg.Db;
 using NHibernate;
 using NHibernate.Cfg;
+using NHibernate.Context;
 using NHibernate.Mapping.ByCode;
 using Ninject;
 using Ninject.Modules;
@@ -23,7 +24,7 @@ namespace microservice1.DI
                     var modelMapper = new ModelMapper();
                     modelMapper.AddMappings(Assembly.GetExecutingAssembly().GetTypes());
                     cfg.AddMapping(modelMapper.CompileMappingForAllExplicitlyAddedEntities());
-
+                    cfg.CurrentSessionContext<WebSessionContext>();
                     return Fluently.Configure(cfg)
                           .Database(MsSqlConfiguration.MsSql2008
                                       .ConnectionString(c => c
@@ -38,7 +39,9 @@ namespace microservice1.DI
                 (context) =>
                 {
                     var factory = context.Kernel.Get<ISessionFactory>();
-                    return factory.OpenSession();
+                    var session = factory.OpenSession();
+                    CurrentSessionContext.Bind(session);
+                    return session;
                 }
             ).InRequestScope()
             .OnActivation(session =>
